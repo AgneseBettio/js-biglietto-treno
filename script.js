@@ -12,12 +12,22 @@ var prezzoScontoOver = prezzoIntero - ((prezzoIntero / 100) * 40);
 console.log("biglietto scontato Over", prezzoScontoOver);
 var prezzoScontoJunior = prezzoIntero - ((prezzoIntero / 100) * 20);
 console.log("biglietto scontato Junior", prezzoScontoJunior);
-var prezzoBiglietto
 
-if (etàPasseggero <= 17) { 
-    console.log(prezzoBiglietto = prezzoScontoJunior)
-} else if (etàPasseggero > 65) { 
-    console.log(prezzoBiglietto = prezzoScontoOver)
-} else {
-    console.log(prezzoBiglietto = prezzoIntero)
+
+
+
+if (kmPercorsi === "" || etàPasseggero === "") {
+    alert("manca campo obligatorio")
+} else if (Number.isNaN(kmPercorsi) || Number.isNaN(etàPasseggero)) {
+    alert ("i km da percorrere e la vostra età vanno scritti in cifre")    
+} else { 
+    var prezzoBiglietto
+    if (etàPasseggero <= 17) { 
+        console.log(prezzoBiglietto = prezzoScontoJunior + "Euro")
+    } else if (etàPasseggero > 65) { 
+        console.log(prezzoBiglietto = prezzoScontoOver + "Euro")
+    } else {
+        console.log(prezzoBiglietto = prezzoIntero + "Euro")
+    }
 }
+
