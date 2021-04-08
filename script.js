@@ -7,8 +7,17 @@ console.log("Km tragitto",kmPercorsi);
 var etàPasseggero = parseInt(prompt("quanti anni hai?"));
 console.log("Età passeggero", etàPasseggero);
 var prezzoIntero = (0.21 * kmPercorsi).toFixed(2);
-console.log(prezzoIntero);
-var scontoOver = prezzoIntero - ((prezzoIntero / 100) * 40);
-console.log("biglietto scontato Over",scontoOver);
-var scontoJunior = prezzoIntero - ((prezzoIntero / 100) * 20);
-console.log("biglietto scontato Junior",scontoJunior);
+console.log("prezzo intero", prezzoIntero);
+var prezzoScontoOver = prezzoIntero - ((prezzoIntero / 100) * 40);
+console.log("biglietto scontato Over", prezzoScontoOver);
+var prezzoScontoJunior = prezzoIntero - ((prezzoIntero / 100) * 20);
+console.log("biglietto scontato Junior", prezzoScontoJunior);
+var prezzoBiglietto
+
+if (etàPasseggero <= 17) { 
+    console.log(prezzoBiglietto = prezzoScontoJunior)
+} else if (etàPasseggero > 65) { 
+    console.log(prezzoBiglietto = prezzoScontoOver)
+} else {
+    console.log(prezzoBiglietto = prezzoIntero)
+}
