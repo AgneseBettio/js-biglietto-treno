@@ -8,9 +8,9 @@ var etàPasseggero = parseInt(prompt("quanti anni hai?"));
 console.log("Età passeggero", etàPasseggero);
 var prezzoIntero = (0.21 * kmPercorsi).toFixed(2);
 console.log("prezzo intero", prezzoIntero);
-var prezzoScontoOver = prezzoIntero - ((prezzoIntero / 100) * 40);
+var prezzoScontoOver = (prezzoIntero - ((prezzoIntero / 100) * 40)).toFixed(2);
 console.log("biglietto scontato Over", prezzoScontoOver);
-var prezzoScontoJunior = prezzoIntero - ((prezzoIntero / 100) * 20);
+var prezzoScontoJunior = (prezzoIntero - ((prezzoIntero / 100) * 20)).toFixed(2);
 console.log("biglietto scontato Junior", prezzoScontoJunior);
 
 
@@ -19,7 +19,7 @@ console.log("biglietto scontato Junior", prezzoScontoJunior);
 if (kmPercorsi === "" || etàPasseggero === "") {
     alert("manca campo obligatorio")
 } else if (Number.isNaN(kmPercorsi) || Number.isNaN(etàPasseggero)) {
-    alert ("i km da percorrere e la vostra età vanno scritti in cifre")    
+    alert ("i km da percorrere e la vostra età vanno inseriti in cifre")    
 } else { 
     var prezzoBiglietto;
     if (etàPasseggero <= 17) { 
