@@ -21,13 +21,14 @@ if (kmPercorsi === "" || etàPasseggero === "") {
 } else if (Number.isNaN(kmPercorsi) || Number.isNaN(etàPasseggero)) {
     alert ("i km da percorrere e la vostra età vanno scritti in cifre")    
 } else { 
-    var prezzoBiglietto
+    var prezzoBiglietto;
     if (etàPasseggero <= 17) { 
-        console.log(prezzoBiglietto = prezzoScontoJunior + "Euro")
+        console.log(prezzoBiglietto = prezzoScontoJunior + "€")
     } else if (etàPasseggero > 65) { 
-        console.log(prezzoBiglietto = prezzoScontoOver + "Euro")
+        console.log(prezzoBiglietto = prezzoScontoOver + "€")
     } else {
-        console.log(prezzoBiglietto = prezzoIntero + "Euro")
+        console.log(prezzoBiglietto = prezzoIntero + "€")
     }
 }
 
+document.getElementById("prezzo-finito").innerHTML= prezzoBiglietto;
