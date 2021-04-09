@@ -4,8 +4,8 @@ va applicato uno sconto del 40% per gli over 65 */
 
 var kmPercorsi = parseInt(prompt("quanti chilometri devi percorrere?"));
 console.log("Km tragitto",kmPercorsi);
-var etàPasseggero = parseInt(prompt("quanti anni hai?"));
-console.log("Età passeggero", etàPasseggero);
+var etaPasseggero = parseInt(prompt("quanti anni hai?"));
+console.log("Eta passeggero", etaPasseggero);
 var prezzoIntero = (0.21 * kmPercorsi).toFixed(2);
 console.log("prezzo intero", prezzoIntero);
 var prezzoScontoOver = (prezzoIntero - ((prezzoIntero / 100) * 40)).toFixed(2);
@@ -16,15 +16,15 @@ console.log("biglietto scontato Junior", prezzoScontoJunior);
 
 
 
-if (kmPercorsi === "" || etàPasseggero === "") {
+if (kmPercorsi === "" || etaPasseggero === "") {
     alert("manca campo obligatorio")
-} else if (Number.isNaN(kmPercorsi) || Number.isNaN(etàPasseggero)) {
+} else if (Number.isNaN(kmPercorsi) || Number.isNaN(etaPasseggero)) {
     alert ("i km da percorrere e la vostra età vanno inseriti in cifre")    
 } else { 
     var prezzoBiglietto;
-    if (etàPasseggero <= 17) { 
+    if (etaPasseggero <= 17) { 
         console.log(prezzoBiglietto = prezzoScontoJunior + "€")
-    } else if (etàPasseggero > 65) { 
+    } else if (etaPasseggero > 65) { 
         console.log(prezzoBiglietto = prezzoScontoOver + "€")
     } else {
         console.log(prezzoBiglietto = prezzoIntero + "€")
